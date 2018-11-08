@@ -1,0 +1,15 @@
+685956142: George Washington 105 Old Bridge ln Danbury, CT 35801.
+896145236: John Adams 105 Old Bridge ln Woodbury, CT 99501.
+254123895: Thomas Jefferson 105 Old Bridge ln Ridgebury, CT 98004.
+745149856: James Madison 105 Old Bridge ln stanford, CT 05751.
+786253142: James Monroe 105 Old Bridge ln Hartford, CT 24517.
+142529684: John Quincy Adams 105 Old Bridge ln waterbury, CT 25813.
+256684153: Andrew Jackson 105 Old Bridge ln Glastonbury, CT 57401.
+235698471: Martin Van Buren 105 Old Bridge ln Derby, CT 02840.
+145523586: William Henry Harrison 105 Old Bridge ln Princeton, CT 29020.
+784526148: John Tyler 105 Old Bridge ln Norwalk, CT 98004.
+986452147: James K. Polk 105 Old Bridge ln Newark, CT 44179.
+147258369: Zachary Taylor 105 Old Bridge ln Danbury, CT 24517.
+753159852: Millard Fillmore 105 Old Bridge ln Danbury, CT 25813.
+357159456: Franklin Pierce 105 Old Bridge ln Danbury, CT 74101 .
+852951486: James Buchanan 105 Old Bridge ln Danbury, CT 25813.
