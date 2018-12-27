@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;CS6086AShelar&apos; to &apos;CS6086AShelarManualHashmap&apos;&#x0D;&#x0A;- Original project: &apos;Assignment6&apos;&#x0D;&#x0A;- Original element: &apos;CS6086AShelar&apos;&#x0D;&#x0A;- Renamed element: &apos;CS6086AShelarManualHashmap&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CS6086AShelar&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{CS6086AShelar.java[CS6086AShelar" matchStrategy="1" name="CS6086AShelarManualHashmap" qualified="false" references="true" similarDeclarations="false" stamp="1540933062261" textual="false" version="1.0"/>
+</session>

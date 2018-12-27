@@ -1,0 +1,25 @@
+class Calculation{
+	int z=0;
+	public void add(int x, int y) {
+		z=x+y;
+		System.out.println("Addition is: "+z);
+	}
+	
+}
+
+class mycal extends Calculation{
+	
+	public void sub(int x,int y) {
+		z=x-y;
+	}
+	
+}
+public class LinkedListTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+

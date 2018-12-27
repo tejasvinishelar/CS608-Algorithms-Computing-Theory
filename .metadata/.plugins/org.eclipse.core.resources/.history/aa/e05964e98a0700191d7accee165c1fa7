@@ -1,0 +1,116 @@
+import java.util.Arrays;
+
+public class Sudoku {
+
+	int sudoku[][]=new int[9][9];
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] subGrid1=new int[3][3];
+		int n=3;
+		subGrid1=getmagicmatrix(n);
+		getsudoku2(subGrid1);
+		
+	}
+	private static void getsudoku2(int[][] subGrid1) {
+		// TODO Auto-generated method stub
+		int subGrid2[][],subGrid3[][],subGrid4[][],subGrid5[][],subGrid6[][],subGrid7[][],subGrid8[][],subGrid9[][];
+		subGrid2=getHorizontalSubgrid(subGrid1);
+		subGrid3=getHorizontalSubgrid(subGrid2);
+		
+		for(int i=0;i<subGrid2[0].length;i++) {
+			for(int j=0;j<subGrid2[0].length;j++) {
+				if(i==2) {
+					subGrid3[0][j]=subGrid2[i][j];
+				}else {
+				subGrid2[i+1][j]=subGrid1[i][j];
+				}
+			}
+		}
+		for(int i=0;i<subGrid1[0].length;i++) {
+			for(int j=0;j<subGrid1[0].length;j++) {
+				if(i==2) {
+					subGrid2[0][j]=subGrid1[i][j];
+				}else {
+				subGrid2[i+1][j]=subGrid1[i][j];
+				}
+			}
+		}
+		for(int i=0;i<subGrid1[0].length;i++) {
+			for(int j=0;j<subGrid1[0].length;j++) {
+				if(i==2) {
+					subGrid2[0][j]=subGrid1[i][j];
+				}else {
+				subGrid2[i+1][j]=subGrid1[i][j];
+				}
+			}
+		}
+		for(int i=0;i<subGrid1[0].length;i++) {
+			for(int j=0;j<subGrid1[0].length;j++) {
+				if(i==2) {
+					subGrid2[0][j]=subGrid1[i][j];
+				}else {
+				subGrid2[i+1][j]=subGrid1[i][j];
+				}
+			}
+		}
+		for(int i=0;i<subGrid1[0].length;i++) {
+			for(int j=0;j<subGrid1[0].length;j++) {
+				if(i==2) {
+					subGrid2[0][j]=subGrid1[i][j];
+				}else {
+				subGrid2[i+1][j]=subGrid1[i][j];
+				}
+			}
+		}
+	
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				System.out.print(" "+subGrid2[i][j]);
+			}
+			System.out.println(" ");
+		}
+		
+	}
+	private static int[][] getHorizontalSubgrid(int[][] subGrid1) {
+		// TODO Auto-generated method stub
+		int subGrid2[][]=new int[3][3];
+		for(int i=0;i<subGrid1[0].length;i++) {
+			for(int j=0;j<subGrid1[0].length;j++) {
+				if(i==2) {
+					subGrid2[0][j]=subGrid1[i][j];
+				}else {
+				subGrid2[i+1][j]=subGrid1[i][j];
+				}
+			}
+		}
+		return subGrid2;
+	}
+	private static int[][] getmagicmatrix(int n) {
+		// TODO Auto-generated method stub
+		int magicmatrix[][]=new int[n][n];
+		int counter = 1;
+		int row = 0;
+		int col = (n - 1) / 2;
+		magicmatrix[row][col] = counter;
+ 
+		while (true) {
+				if (magicmatrix[(row - 1) < 0 ? (row - 1 + n) : row - 1][(col + 1) % n] == 0) {
+				row = (row - 1) < 0 ? (row - 1 + n) : row - 1;
+				col = (col + 1) % n;
+			} else { row = (row + 1) % n; }
+ 
+			counter = counter + 1;
+			magicmatrix[row][col] = counter;
+			if (counter == n * n) break;
+		}
+ 
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(magicmatrix[i][j] + " ");
+			}
+			System.out.println();
+		}
+		System.out.println("\nMagical No : " + (n * n * n + n) / 2);
+		return magicmatrix;
+	}
+}

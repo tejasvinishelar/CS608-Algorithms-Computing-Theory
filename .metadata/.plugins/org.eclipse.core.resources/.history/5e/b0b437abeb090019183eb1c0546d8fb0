@@ -1,0 +1,27 @@
+
+public class LinkedListTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class MyLinkedList{
+	
+	private class Node{
+		int data;
+		Node next;
+		
+		public Node(int data, Node next) {
+			this.data= data;
+			this.next=next;
+		}
+		
+	}
+	
+	
+	
+	
+}

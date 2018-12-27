@@ -2,28 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Info" key="selection"/>
+		<item value="n" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="info"/>
-			<item value="final"/>
-			<item value="fina"/>
-			<item value="getEle"/>
-			<item value="insertAtBeginning"/>
-			<item value="B "/>
-			<item value="A"/>
-			<item value="R"/>
-			<item value="L"/>
-			<item value="DOWN"/>
-			<item value="UP"/>
-			<item value="***"/>
-			<item value="if"/>
-			<item value="array"/>
+			<item value="3"/>
+			<item value="as wel"/>
+			<item value="15"/>
+			<item value="6"/>
+			<item value="13"/>
+			<item value="readfile"/>
+			<item value="readFile"/>
+			<item value="The BFS"/>
+			<item value="The DFS"/>
+			<item value="Matrix"/>
+			<item value="9"/>
+			<item value="-"/>
+			<item value="- &gt;"/>
+			<item value="7"/>
+			<item value="V"/>
 		</list>
 		<list key="replacehistory">
+			<item value="n"/>
+			<item value="15"/>
+			<item value="6"/>
+			<item value="13"/>
+			<item value="9"/>
+			<item value=""/>
+			<item value="DFSNode"/>
+			<item value="BstNode"/>
 			<item value="unsortedleftist"/>
 			<item value="right"/>
 			<item value="left"/>

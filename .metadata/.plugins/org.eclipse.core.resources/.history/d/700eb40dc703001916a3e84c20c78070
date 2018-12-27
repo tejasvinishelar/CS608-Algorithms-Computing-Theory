@@ -1,0 +1,130 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
+
+public class CS60812BShelar {
+
+	static int graph[][];
+	static int size;
+	static int totalPath;
+	static int degree[];
+	public static void main(String arg[]) throws FileNotFoundException {
+		myInfo();
+		degree=new int[15];
+		graph=readFile("C:\\Users\\TejasviniAditya\\Documents\\Java\\MSTGraph\\src\\inputDataSample10.txt");
+		size=graph[0].length;
+		findDegreeOfEachNode();
+		int odd= isEulerianPathAndCircuit();
+		if(odd==2) {
+			System.out.println("Yes, Given Graph satisfies Eulerian path condition as\nIt contains exactly two verices with odd degree ");
+		}else if(odd==0) {
+			System.out.println("Yes, Given Graph satisfies Eulerian path condition as\\n it contains all nodes with even degree ");
+			System.out.println("\n\nGiven Graph satisfies Eulerian Circuit condition as\\n it contains all nodes with even degree ");
+		}
+		else {
+			System.out.println("No, Given Graph does not satisfy Eulerian path condition as\nIt doesn't contains exactly two verices with odd degree \n as well as all even degree nodes ");
+			System.out.println("\n\nNo, Given Graph does not satisfy Eulerian Circuit condition as\nIt doesn't contains all even degree nodes ");
+		}
+		if(isDiracTheorem()) 
+			System.out.println("\n\nYes, it Satisfies Dirac Theorem : \n1-As there are more than 3 nodes\n 2- Every node degree is greater than n/3 ");
+		else
+			System.out.println("\n\nNo, it does not Satisfies Dirac Theorem : \n1-As there are either no more than 3 nodes or \n2- Not every node degree is greater than n/3  ");
+		
+		if(isOresTheorem())
+			System.out.println("\n\nYes, it Satisfies Ore's Theorem : \nSum of degree of every non adjacent node is greater than or equal to "+graph[0].length);
+		else
+			System.out.println("\\n\\nNo, it does not Satisfies Ore's Theorem : \\nAs Sum of degree of every non adjacent node is not greater than or equal to \"+graph[0].length");
+	}
+	
+
+	private static boolean isOresTheorem() {
+		// TODO Auto-generated method stub
+		int sum=0;
+		boolean flag=true;
+		for(int i=0;i<graph[0].length;i++) {
+			for(int j=0;j<graph[0].length;j++) {
+				if(graph[i][j]<=0) {
+					sum = graph[i][j]+graph[j][i];
+				}
+				if(sum<graph[0].length) {
+					flag=false;
+				}
+			}
+		}
+		return flag;
+	}
+
+
+	private static boolean isDiracTheorem() {
+		// TODO Auto-generated method stub
+		int n=graph[0].length;
+		Boolean dirac=false;
+		for(int i: degree) {
+			System.out.println("Degree"+i);
+			if(n>=3 && i>=n/2)
+				dirac=true;
+		}
+		return dirac;
+	}
+
+
+	private static int isEulerianPathAndCircuit() {
+		// TODO Auto-generated method stub
+		int odd=0;
+		for(int i : degree) {
+			if(i%2==1)
+				odd++;
+		}
+		return odd;
+	}
+
+
+	private static void findDegreeOfEachNode() {
+		// TODO Auto-generated method stub
+		int degre=0;
+		for(int i=0;i<13;i++) {
+			degre=0;
+			for(int j=0;j<13;j++) {
+				if(graph[i][j]>0)
+					degre++;
+			}
+			degree[i]=degre;
+		}
+		
+	}
+
+
+	private static void myInfo() {
+		// TODO Auto-generated method stub
+		Date today = new Date();
+
+		System.out.println("Name : Tejasvini Shelar");
+		System.out.println("Course Number : CS608 ");
+		System.out.println("Date : "+today.toString());
+	}
+
+	private static int[][] readFile(String filename) throws FileNotFoundException {
+		ArrayList<Integer> list=new ArrayList<>(); 
+		int inputdata[][] = null,i=0;
+		File f1 = new File(filename);
+		if(!f1.exists())
+			System.out.println("input file not found");
+
+		Scanner sc = new Scanner(f1);
+		inputdata = new int[13][13];
+		while(sc.hasNextInt()) {
+			for (i=0; i<13; i++) {
+				for(int j=0; j<13; j++) {
+					inputdata[i][j] = sc.nextInt();
+				}
+			}
+		}
+		return inputdata;
+	}
+
+}
+
+
